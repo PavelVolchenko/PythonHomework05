@@ -22,17 +22,16 @@ def winner():
             field[1] == 'O' and field[4] == 'O' and field[7] == 'O':
         print("ПОБЕДИЛИ - O\nИГРА ЗАКОНЧЕНА!")
         return 1
-    else:
-        return 0
+    return 0
 
 
 def turn(char, position):
     if field[position] == 'X':
         print("Эта клетка занята")
-        return 0, 'X'
+        return 0, char
     elif field[position] == 'O':
         print("Эта клетка занята")
-        return 0, 'O'
+        return 0, char
     field[position] = char
     for i in range(1, 10):
         if i % 3 == 0:
